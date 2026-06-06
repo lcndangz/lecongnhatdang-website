@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Lê Công Nhật Đăng | Founder ND Media Network</title>
-  <meta name="description" content="Lê Công Nhật Đăng là nhà sáng lập ND Media Network, hoạt động trong lĩnh vực Social Medi<div class="box">a Marketing, Facebook Growth và Livestream Commerce tại Việt Nam." />
-
-  <meta property="og:title" content="Lê Công Nhật Đăng | Founder ND Media Network" />
-  <meta property="og:description" content="Founder ND Media Network, Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lecongnhatdang.id.vn" />
+  <meta name="description" content="Lê Công Nhật Đăng là nhà sáng lập ND Media Network, hoạt động trong lĩnh vực Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam." />
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,39 +129,20 @@
       line-height: 1.8;
     }
 
-    .avatar-wrap {
+    .hero-photo-wrap {
       display: flex;
       justify-content: center;
     }
 
-    .avatar {
+    .hero-photo {
       width: 245px;
       height: 245px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,.35), transparent 26%),
-        linear-gradient(135deg, #2563eb, #7c3aed, #0f172a);
+      border-radius: 34px;
+      object-fit: cover;
       border: 1px solid rgba(255,255,255,.18);
       box-shadow:
         0 0 0 14px rgba(255,255,255,.035),
         0 30px 80px rgba(37,99,235,.35);
-      position: relative;
-    }
-
-    .avatar span {
-      font-size: 66px;
-      font-weight: 800;
-      letter-spacing: -4px;
-    }
-
-    .avatar small {
-      position: absolute;
-      bottom: 38px;
-      font-size: 13px;
-      color: #dbeafe;
-      opacity: .85;
     }
 
     .stats {
@@ -179,46 +155,67 @@
     }
 
     .box {
-  padding: 18px 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.045);
-  border: 1px solid rgba(255,255,255,.10);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.10);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
-.box-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(139,92,246,.12);
-  border: 1px solid rgba(139,92,246,.20);
-}
+    .profile-mini {
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
 
-.box-icon img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
+    .org-logo {
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border-radius: 18px;
+      object-fit: contain;
+      padding: 9px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
 
-.box span {
-  display: block;
-  color: #94a3b8;
-  font-size: 11px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: .8px;
-}
+    .field-mark {
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(37,99,235,.25), rgba(168,85,247,.25));
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
 
-.box strong {
-  font-size: 16px;
-  color: #fff;
-}
+    .box span {
+      display: block;
+      color: #94a3b8;
+      font-size: 11px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .box strong {
+      font-size: 16px;
+      color: #fff;
+    }
 
     .actions {
       display: flex;
@@ -328,9 +325,8 @@
     @media (max-width: 860px) {
       .card { padding: 34px; }
       .hero { grid-template-columns: 1fr; }
-      .avatar-wrap { justify-content: flex-start; }
-      .avatar { width: 190px; height: 190px; }
-      .avatar span { font-size: 52px; }
+      .hero-photo-wrap { justify-content: flex-start; }
+      .hero-photo { width: 190px; height: 190px; }
       .stats, .services { grid-template-columns: 1fr; }
       h1 { letter-spacing: -2px; }
     }
@@ -343,34 +339,6 @@
       .links img { width: 26px; height: 26px; }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Lê Công Nhật Đăng",
-    "url": "https://lecongnhatdang.id.vn",
-    "jobTitle": "Founder",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ND Media Network"
-    },
-    "sameAs": [
-      "https://www.facebook.com/LeCongNhatDangvn.mmo",
-      "https://www.instagram.com/hotboy_quannet/",
-      "https://zalo.me/0399915715",
-      "https://t.me/vn_mmo"
-    ],
-    "knowsAbout": [
-      "Social Media Marketing",
-      "Facebook Growth",
-      "Facebook Marketing",
-      "Livestream Commerce",
-      "Digital Marketing"
-    ],
-    "nationality": "Vietnamese"
-  }
-  </script>
 </head>
 
 <body>
@@ -400,45 +368,36 @@
           </div>
         </div>
 
-        <div class="avatar-wrap">
-          <div class="avatar">
-            <span>ND</span>
-            <small>Media Network</small>
-          </div>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="avatar.jpg" alt="Lê Công Nhật Đăng">
         </div>
       </section>
 
-     <section class="stats">
-  <div class="box">
-    <div class="box-icon">
-      <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/701296502_122166620834975340_7775943072524410605_n.jpg?stp=dst-jpg_tt6&cstp=mx960x958&ctp=s960x958&_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=jWkYPmNwrN4Q7kNvwEtHWED&_nc_oc=AdpDXIT4QaRdTG-fJECH5IJ5dRhudLhXHNE7cZVA2ESxRRm0tW1C93D6preUOX3BtgM&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=p6cV4jPyRhhgvYM60Dl5ig&_nc_ss=792a8&oh=00_Af9IUBt9pGhpr5UXN8C6ddixn59a2tLA_K8IgWI-nlaM0g&oe=6A296B2E" alt="">
-    </div>
-    <div>
-      <span>Tên</span>
-      <strong>Lê Công Nhật Đăng</strong>
-    </div>
-  </div>
+      <section class="stats">
+        <div class="box">
+          <img class="profile-mini" src="avatar.jpg" alt="Lê Công Nhật Đăng">
+          <div>
+            <span>Founder</span>
+            <strong>Lê Công Nhật Đăng</strong>
+          </div>
+        </div>
 
-  <div class="box">
-    <div class="box-icon">
-      <img src="https://cdn.simpleicons.org/briefcase/8b5cf6" alt="">
-    </div>
-    <div>
-      <span>Tổ chức</span>
-      <strong>ND Media Network</strong>
-    </div>
-  </div>
+        <div class="box">
+          <img class="org-logo" src="logo.png" alt="ND Media Network">
+          <div>
+            <span>Organization</span>
+            <strong>ND Media Network</strong>
+          </div>
+        </div>
 
-  <div class="box">
-    <div class="box-icon">
-      <img src="https://cdn.simpleicons.org/target/8b5cf6" alt="">
-    </div>
-    <div>
-      <span>Lĩnh vực</span>
-      <strong>Social Media</strong>
-    </div>
-  </div>
-</section>
+        <div class="box">
+          <div class="field-mark">SM</div>
+          <div>
+            <span>Industry</span>
+            <strong>Social Media</strong>
+          </div>
+        </div>
+      </section>
 
       <div class="links">
         <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
