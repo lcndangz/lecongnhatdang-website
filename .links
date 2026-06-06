@@ -107,9 +107,8 @@
       border-radius: 18px;
       background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.12);
-      color: white;
       text-decoration: none;
-      transition: .25s ease;
+      transition: all .25s ease;
     }
 
     .links a:hover {
@@ -119,16 +118,11 @@
       box-shadow: 0 12px 32px rgba(37,99,235,.35);
     }
 
-    .links svg {
-      width: 28px;
-      height: 28px;
-      stroke-width: 2;
-    }
-
-    .zalo-icon {
-      width: 28px;
-      height: 28px;
+    .links img {
+      width: 30px;
+      height: 30px;
       object-fit: contain;
+      display: block;
     }
 
     footer {
@@ -143,6 +137,7 @@
       h1 { letter-spacing: -2px; }
       .links { justify-content: center; }
       .links a { width: 58px; height: 58px; }
+      .links img { width: 26px; height: 26px; }
     }
   </style>
 </head>
@@ -178,23 +173,23 @@
 
     <div class="links">
       <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
-        <i data-lucide="facebook"></i>
-      </a>
-
-      <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" class="zalo-icon">
+        <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
       </a>
 
       <a href="https://www.instagram.com/hotboy_quannet/" target="_blank" aria-label="Instagram">
-        <i data-lucide="instagram"></i>
+        <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
+      </a>
+
+      <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
       </a>
 
       <a href="https://t.me/vn_mmo" target="_blank" aria-label="Telegram">
-        <i data-lucide="send"></i>
+        <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
       </a>
 
       <a href="mailto:lethidang3110@gmail.com" aria-label="Email">
-        <i data-lucide="mail"></i>
+        <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email">
       </a>
     </div>
 
@@ -202,10 +197,5 @@
       © 2026 Lê Công Nhật Đăng. All rights reserved.
     </footer>
   </main>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>
