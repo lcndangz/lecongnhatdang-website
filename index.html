@@ -7,36 +7,85 @@
   <title>Lê Công Nhật Đăng | Founder ND Media Network</title>
   <meta name="description" content="Lê Công Nhật Đăng là nhà sáng lập ND Media Network, hoạt động trong lĩnh vực Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam." />
 
+  <meta property="og:title" content="Lê Công Nhật Đăng | Founder ND Media Network" />
+  <meta property="og:description" content="Founder ND Media Network, Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lecongnhatdang.id.vn" />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
       font-family: Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(59,130,246,.22), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(168,85,247,.20), transparent 35%),
-        #08090d;
+        radial-gradient(circle at 15% 15%, rgba(37,99,235,.35), transparent 32%),
+        radial-gradient(circle at 85% 75%, rgba(124,58,237,.32), transparent 34%),
+        radial-gradient(circle at 50% 50%, rgba(14,165,233,.10), transparent 45%),
+        #050816;
       color: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 28px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at center, black, transparent 75%);
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .card {
       width: 100%;
-      max-width: 980px;
-      padding: 48px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 32px;
-      background: rgba(255,255,255,.06);
-      backdrop-filter: blur(18px);
+      padding: 52px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 34px;
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      backdrop-filter: blur(20px);
       box-shadow: 0 30px 100px rgba(0,0,0,.45);
+      overflow: hidden;
+      position: relative;
     }
 
-    .badge {
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -180px;
+      top: -160px;
+      background: radial-gradient(circle, rgba(37,99,235,.35), transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 44px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand {
       display: inline-flex;
+      align-items: center;
+      gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
       background: rgba(34,197,94,.12);
@@ -46,18 +95,36 @@
       margin-bottom: 28px;
     }
 
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 20px rgba(34,197,94,.8);
+    }
+
     h1 {
-      font-size: clamp(42px, 7vw, 82px);
+      font-size: clamp(44px, 7vw, 86px);
       line-height: .95;
-      letter-spacing: -3px;
+      letter-spacing: -4px;
       margin-bottom: 22px;
+      background: linear-gradient(90deg, #ffffff, #93c5fd, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(59,130,246,.28);
     }
 
     h2 {
-      font-size: clamp(20px, 3vw, 34px);
+      font-size: clamp(22px, 3vw, 36px);
       color: #cbd5e1;
       font-weight: 500;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
@@ -65,21 +132,57 @@
       color: #94a3b8;
       font-size: 18px;
       line-height: 1.8;
-      margin-bottom: 32px;
     }
 
-    .grid {
+    .avatar-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 245px;
+      height: 245px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,.35), transparent 26%),
+        linear-gradient(135deg, #2563eb, #7c3aed, #0f172a);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow:
+        0 0 0 14px rgba(255,255,255,.035),
+        0 30px 80px rgba(37,99,235,.35);
+      position: relative;
+    }
+
+    .avatar span {
+      font-size: 66px;
+      font-weight: 800;
+      letter-spacing: -4px;
+    }
+
+    .avatar small {
+      position: absolute;
+      bottom: 38px;
+      font-size: 13px;
+      color: #dbeafe;
+      opacity: .85;
+    }
+
+    .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin: 34px 0;
+      margin-top: 42px;
+      position: relative;
+      z-index: 2;
     }
 
     .box {
       padding: 22px;
       border-radius: 22px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.11);
     }
 
     .box span {
@@ -87,9 +190,48 @@
       color: #64748b;
       font-size: 13px;
       margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
     }
 
-    .box strong { font-size: 18px; }
+    .box strong {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+      background: #2563eb;
+      border: 1px solid #2563eb;
+      box-shadow: 0 14px 36px rgba(37,99,235,.35);
+      transition: .25s ease;
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.13);
+      box-shadow: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: .92;
+    }
 
     .links {
       display: flex;
@@ -125,77 +267,199 @@
       display: block;
     }
 
-    footer {
-      margin-top: 42px;
-      color: #64748b;
-      font-size: 14px;
+    .section {
+      margin-top: 24px;
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
     }
 
-    @media (max-width: 720px) {
-      .card { padding: 30px; border-radius: 24px; }
-      .grid { grid-template-columns: 1fr; }
+    .section h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .service {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      color: #64748b;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .card { padding: 34px; }
+      .hero { grid-template-columns: 1fr; }
+      .avatar-wrap { justify-content: flex-start; }
+      .avatar { width: 190px; height: 190px; }
+      .avatar span { font-size: 52px; }
+      .stats, .services { grid-template-columns: 1fr; }
       h1 { letter-spacing: -2px; }
-      .links { justify-content: center; }
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 16px; }
+      .card { padding: 26px; border-radius: 26px; }
+      .section { padding: 24px; }
       .links a { width: 58px; height: 58px; }
       .links img { width: 26px; height: 26px; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lê Công Nhật Đăng",
+    "url": "https://lecongnhatdang.id.vn",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "ND Media Network"
+    },
+    "sameAs": [
+      "https://www.facebook.com/LeCongNhatDangvn.mmo",
+      "https://www.instagram.com/hotboy_quannet/",
+      "https://zalo.me/0399915715",
+      "https://t.me/vn_mmo"
+    ],
+    "knowsAbout": [
+      "Social Media Marketing",
+      "Facebook Growth",
+      "Facebook Marketing",
+      "Livestream Commerce",
+      "Digital Marketing"
+    ],
+    "nationality": "Vietnamese"
+  }
+  </script>
 </head>
 
 <body>
-  <main class="card">
-    <div class="badge">Founder · Social Media Marketing · Việt Nam</div>
+  <div class="page">
+    <main class="card">
+      <section class="hero">
+        <div>
+          <div class="brand">
+            <span class="brand-dot"></span>
+            Founder · Social Media Marketing · Việt Nam
+          </div>
 
-    <h1>Lê Công Nhật Đăng</h1>
-    <h2>Founder ND Media Network</h2>
+          <h1>Lê Công Nhật Đăng</h1>
 
-    <p>
-      Lê Công Nhật Đăng là nhà sáng lập ND Media Network, hoạt động trong lĩnh vực
-      Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam.
-    </p>
+          <h2>Founder <span class="gradient-text">ND Media Network</span></h2>
 
-    <section class="grid">
-      <div class="box">
-        <span>Tên</span>
-        <strong>Lê Công Nhật Đăng</strong>
+          <p>
+            Lê Công Nhật Đăng là nhà sáng lập ND Media Network, hoạt động trong lĩnh vực
+            Social Media Marketing, Facebook Growth và Livestream Commerce tại Việt Nam.
+            Anh tập trung phát triển các giải pháp truyền thông số, hỗ trợ cá nhân và doanh nghiệp
+            xây dựng thương hiệu trên nền tảng mạng xã hội.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank">Liên hệ hợp tác</a>
+            <a class="btn secondary" href="#about">Xem hồ sơ</a>
+          </div>
+        </div>
+
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <span>ND</span>
+            <small>Media Network</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="box">
+          <span>Vai trò</span>
+          <strong>Founder</strong>
+        </div>
+
+        <div class="box">
+          <span>Tổ chức</span>
+          <strong>ND Media Network</strong>
+        </div>
+
+        <div class="box">
+          <span>Lĩnh vực</span>
+          <strong>Social Media</strong>
+        </div>
+      </section>
+
+      <div class="links">
+        <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
+          <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/hotboy_quannet/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
+        </a>
+
+        <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+        </a>
+
+        <a href="https://t.me/vn_mmo" target="_blank" aria-label="Telegram">
+          <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
+        </a>
+
+        <a href="mailto:lethidang3110@gmail.com" aria-label="Email">
+          <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email">
+        </a>
       </div>
 
-      <div class="box">
-        <span>Tổ chức</span>
-        <strong>ND Media Network</strong>
-      </div>
+      <section class="section" id="about">
+        <h3>Về Lê Công Nhật Đăng</h3>
+        <p>
+          Website này là hồ sơ chính thức của Lê Công Nhật Đăng, dùng để xác thực thông tin cá nhân,
+          thương hiệu và các hoạt động liên quan đến truyền thông số. Nội dung tập trung vào Social Media Marketing,
+          phát triển hệ thống Facebook, thương mại qua livestream và xây dựng nhận diện thương hiệu trên nền tảng số.
+        </p>
+      </section>
 
-      <div class="box">
-        <span>Lĩnh vực</span>
-        <strong>Social Media</strong>
-      </div>
-    </section>
+      <section class="section">
+        <h3>Lĩnh vực hoạt động</h3>
 
-    <div class="links">
-      <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
-        <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
-      </a>
+        <div class="services">
+          <div class="service">
+            <strong>Facebook Growth</strong><br>
+            Phát triển hiện diện thương hiệu và tối ưu hoạt động trên nền tảng Facebook.
+          </div>
 
-      <a href="https://www.instagram.com/hotboy_quannet/" target="_blank" aria-label="Instagram">
-        <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
-      </a>
+          <div class="service">
+            <strong>Livestream Commerce</strong><br>
+            Hỗ trợ xây dựng hiệu quả bán hàng, tương tác và chuyển đổi qua livestream.
+          </div>
 
-      <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
-      </a>
-
-      <a href="https://t.me/vn_mmo" target="_blank" aria-label="Telegram">
-        <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
-      </a>
-
-      <a href="mailto:lethidang3110@gmail.com" aria-label="Email">
-        <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email">
-      </a>
-    </div>
+          <div class="service">
+            <strong>Digital Branding</strong><br>
+            Định hình hình ảnh cá nhân, doanh nghiệp và hệ thống truyền thông số.
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       © 2026 Lê Công Nhật Đăng. All rights reserved.
     </footer>
-  </main>
+  </div>
 </body>
 </html>
