@@ -229,8 +229,10 @@
     align-items:center;
     justify-content:center;
 
+    min-width:200px;
     height:64px;
-    padding:0 34px;
+
+    padding:0 32px;
 
     border-radius:999px;
 
@@ -239,26 +241,40 @@
 
     text-decoration:none;
     transition:.3s ease;
-}
 
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:white;
+}
     .btn.secondary{
     background:rgba(255,255,255,.08);
     border:1px solid rgba(255,255,255,.15);
     color:#fff;
 }
 
-    .btn.service{
+    .btn-service{
     background:linear-gradient(
         135deg,
         #7c3aed,
         #2563eb
     );
+}
 
     color:#fff;
     border:none;
 
     box-shadow:
         0 10px 30px rgba(124,58,237,.35);
+}
+
+.btn-service:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 15px 40px rgba(124,58,237,.5);
 }
 
     .btn:hover {
@@ -415,11 +431,11 @@
         Liên hệ hợp tác
     </a>
 
-      <a class="btn service"
-       href="https://lecongnhatdang.shop"
-       target="_blank">
-        🚀 Tăng Tương Tác
-    </a>
+      <a class="btn btn-service"
+   href="https://lecongnhatdang.shop"
+   target="_blank">
+   🚀 Tăng Tương Tác
+</a>
 
     <a class="btn secondary"
        href="#about">
