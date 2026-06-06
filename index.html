@@ -413,6 +413,33 @@
       .links img { width: 26px; height: 26px; }
       .btn { width: 100%; min-width: unset; }
     }
+
+    /* ===== Fade Up Animation ===== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp .8s ease forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: .1s;
+}
+
+.fade-delay-2 {
+  animation-delay: .3s;
+}
+
+.fade-delay-3 {
+  animation-delay: .5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 
 <script type="application/ld+json">
@@ -475,7 +502,7 @@
         </div>
       </section>
 
-      <section class="stats">
+      <section class="stats fade-up fade-delay-1">
         <div class="box">
           <img class="profile-mini" src="avatar.png" alt="Lê Công Nhật Đăng">
           <div>
@@ -528,7 +555,7 @@
         </p>
       </section>
 
-      <section class="section">
+      <section class="section fade-up fade-delay-2">
         <h3>Hành trình phát triển</h3>
         <div class="timeline">
           <div class="timeline-item">
