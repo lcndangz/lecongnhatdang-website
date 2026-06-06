@@ -94,24 +94,41 @@
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 18px;
       margin-top: 30px;
     }
 
     .links a {
-      text-decoration: none;
-      color: #fff;
-      padding: 13px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.09);
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.12);
-      transition: .2s ease;
-      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: .25s ease;
     }
 
     .links a:hover {
-      transform: translateY(-2px);
+      transform: translateY(-4px);
       background: #2563eb;
+      border-color: #2563eb;
+      box-shadow: 0 12px 32px rgba(37,99,235,.35);
+    }
+
+    .links svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 2;
+    }
+
+    .zalo-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
     }
 
     footer {
@@ -124,6 +141,8 @@
       .card { padding: 30px; border-radius: 24px; }
       .grid { grid-template-columns: 1fr; }
       h1 { letter-spacing: -2px; }
+      .links { justify-content: center; }
+      .links a { width: 58px; height: 58px; }
     }
   </style>
 </head>
@@ -158,16 +177,35 @@
     </section>
 
     <div class="links">
-      <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank">Facebook</a>
-      <a href="https://zalo.me/0399915715" target="_blank">Zalo</a>
-      <a href="https://www.instagram.com/hotboy_quannet/" target="_blank">Instagram</a>
-      <a href="https://t.me/vn_mmo" target="_blank">Telegram</a>
-      <a href="mailto:lethidang3110@gmail.com">Email</a>
+      <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
+        <i data-lucide="facebook"></i>
+      </a>
+
+      <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" class="zalo-icon">
+      </a>
+
+      <a href="https://www.instagram.com/hotboy_quannet/" target="_blank" aria-label="Instagram">
+        <i data-lucide="instagram"></i>
+      </a>
+
+      <a href="https://t.me/vn_mmo" target="_blank" aria-label="Telegram">
+        <i data-lucide="send"></i>
+      </a>
+
+      <a href="mailto:lethidang3110@gmail.com" aria-label="Email">
+        <i data-lucide="mail"></i>
+      </a>
     </div>
 
     <footer>
       © 2026 Lê Công Nhật Đăng. All rights reserved.
     </footer>
   </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
