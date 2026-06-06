@@ -9,7 +9,6 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -129,10 +128,7 @@
       line-height: 1.8;
     }
 
-    .hero-photo-wrap {
-      display: flex;
-      justify-content: center;
-    }
+    .hero-photo-wrap { display: flex; justify-content: center; }
 
     .hero-photo {
       width: 245px;
@@ -140,9 +136,48 @@
       border-radius: 34px;
       object-fit: cover;
       border: 1px solid rgba(255,255,255,.18);
-      box-shadow:
-        0 0 0 14px rgba(255,255,255,.035),
-        0 30px 80px rgba(37,99,235,.35);
+      box-shadow: 0 0 0 14px rgba(255,255,255,.035), 0 30px 80px rgba(37,99,235,.35);
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      height: 64px;
+      padding: 0 32px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: .3s ease;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: white;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      color: #fff;
+    }
+
+    .btn-service {
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      border: none;
+      box-shadow: 0 10px 30px rgba(124,58,237,.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: .92;
     }
 
     .stats {
@@ -164,43 +199,32 @@
       gap: 16px;
     }
 
-    .profile-mini {
+    .profile-mini, .org-logo, .field-mark {
       width: 54px;
       height: 54px;
       min-width: 54px;
       border-radius: 18px;
-      object-fit: cover;
       border: 1px solid rgba(255,255,255,.18);
       box-shadow: 0 10px 28px rgba(0,0,0,.25);
     }
 
+    .profile-mini { object-fit: cover; }
+
     .org-logo {
-      width: 54px;
-      height: 54px;
-      min-width: 54px;
-      border-radius: 18px;
       object-fit: contain;
       padding: 9px;
       background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
     }
 
     .field-mark {
-      width: 54px;
-      height: 54px;
-      min-width: 54px;
-      border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, rgba(37,99,235,.25), rgba(168,85,247,.25));
-      border: 1px solid rgba(255,255,255,.14);
       color: #fff;
       font-size: 16px;
       font-weight: 800;
       letter-spacing: .5px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
     }
 
     .box span {
@@ -216,81 +240,6 @@
       font-size: 16px;
       color: #fff;
     }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    min-width:200px;
-    height:64px;
-
-    padding:0 32px;
-
-    border-radius:999px;
-
-    font-size:18px;
-    font-weight:600;
-
-    text-decoration:none;
-    transition:.3s ease;
-
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #3b82f6
-    );
-
-    color:white;
-}
-    .btn.secondary{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    color:#fff;
-}
-
-    .btn-service{
-    background:linear-gradient(
-        135deg,
-        #7c3aed,
-        #2563eb
-    );
-}
-
-    color:#fff;
-    border:none;
-
-    box-shadow:
-        0 10px 30px rgba(124,58,237,.35);
-}
-
-.btn-service:hover{
-    transform:translateY(-3px);
-    box-shadow:
-        0 15px 40px rgba(124,58,237,.5);
-}
-
-    .btn:hover {
-      transform: translateY(-3px);
-      opacity: .92;
-    }
-
-    .actions{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-.actions .btn{
-    min-width:190px;
-}
 
     .links {
       display: flex;
@@ -339,6 +288,43 @@
       margin-bottom: 14px;
     }
 
+    .timeline {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .year {
+      color: #60a5fa;
+      font-weight: 800;
+      padding-top: 18px;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .timeline-content h4 {
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      font-size: 15px;
+    }
+
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -353,6 +339,36 @@
       border: 1px solid rgba(255,255,255,.1);
       color: #cbd5e1;
       line-height: 1.6;
+      transition: .25s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.065);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .ecosystem {
+      margin-top: 24px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .eco-item {
+      padding: 22px;
+      border-radius: 18px;
+      border-left: 4px solid #3b82f6;
+      background: rgba(255,255,255,.04);
+    }
+
+    .eco-item h4 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .eco-item p {
+      margin: 0;
+      font-size: 15px;
     }
 
     footer {
@@ -369,6 +385,8 @@
       .hero-photo-wrap { justify-content: flex-start; }
       .hero-photo { width: 190px; height: 190px; }
       .stats, .services { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .year { padding-top: 0; }
       h1 { letter-spacing: -2px; }
     }
 
@@ -378,27 +396,8 @@
       .section { padding: 24px; }
       .links a { width: 58px; height: 58px; }
       .links img { width: 26px; height: 26px; }
+      .btn { width: 100%; min-width: unset; }
     }
-
-    .service{
-    background: linear-gradient(
-        135deg,
-        #7c3aed,
-        #2563eb
-    ) !important;
-
-    color:white !important;
-    border:none !important;
-
-    box-shadow:
-    0 10px 30px rgba(124,58,237,.35);
-}
-
-.service:hover{
-    transform:translateY(-3px);
-    box-shadow:
-    0 15px 40px rgba(124,58,237,.5);
-}
   </style>
 </head>
 
@@ -413,7 +412,6 @@
           </div>
 
           <h1>Lê Công Nhật Đăng</h1>
-
           <h2>Founder <span class="gradient-text">ND Media Network</span></h2>
 
           <p>
@@ -424,25 +422,10 @@
           </p>
 
           <div class="actions">
-
-    <a class="btn"
-       href="https://www.facebook.com/LeCongNhatDangvn.mmo"
-       target="_blank">
-        Liên hệ hợp tác
-    </a>
-
-      <a class="btn btn-service"
-   href="https://lecongnhatdang.shop"
-   target="_blank">
-   🚀 Tăng Tương Tác
-</a>
-
-    <a class="btn secondary"
-       href="#about">
-        Xem hồ sơ
-    </a>
-
-</div>
+            <a class="btn" href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank">Liên hệ hợp tác</a>
+            <a class="btn btn-service" href="https://lecongnhatdang.shop" target="_blank">🚀 Tăng Tương Tác</a>
+            <a class="btn secondary" href="#about">Xem hồ sơ</a>
+          </div>
         </div>
 
         <div class="hero-photo-wrap">
@@ -480,19 +463,15 @@
         <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
           <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
         </a>
-
         <a href="https://www.instagram.com/hotboy_quannet/" target="_blank" aria-label="Instagram">
           <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
         </a>
-
         <a href="https://zalo.me/0399915715" target="_blank" aria-label="Zalo">
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
         </a>
-
         <a href="https://t.me/vn_mmo" target="_blank" aria-label="Telegram">
           <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
         </a>
-
         <a href="mailto:lethidang3110@gmail.com" aria-label="Email">
           <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email">
         </a>
@@ -507,75 +486,67 @@
         </p>
       </section>
 
-     <section class="section">
-  <h3>Dự án & Hệ sinh thái</h3>
+      <section class="section">
+        <h3>Hành trình phát triển</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="year">2020</div>
+            <div class="timeline-content">
+              <h4>Bắt đầu hành trình</h4>
+              <p>Tìm hiểu và tham gia lĩnh vực Social Media Marketing, Facebook Marketing và Digital Marketing.</p>
+            </div>
+          </div>
 
-  <div class="services">
+          <div class="timeline-item">
+            <div class="year">2022 - 2024</div>
+            <div class="timeline-content">
+              <h4>Phát triển chuyên môn</h4>
+              <p>Nghiên cứu, vận hành và phát triển các hệ thống liên quan đến Facebook, Livestream Commerce và truyền thông số.</p>
+            </div>
+          </div>
 
-    <div class="service">
-      <strong>ND Media Network</strong><br>
-      Hệ sinh thái truyền thông số tập trung vào Social Media Marketing và Facebook Growth.
-    </div>
-
-    <div class="service">
-      <strong>LeCongNhatDang.Shop</strong><br>
-      Nền tảng cung cấp giải pháp tăng tương tác và hỗ trợ phát triển hiện diện trên mạng xã hội.
-    </div>
-
-    <div class="service">
-      <strong>Digital Ecosystem</strong><br>
-      Xây dựng các giải pháp hỗ trợ cá nhân và doanh nghiệp phát triển thương hiệu trực tuyến.
-    </div>
-
-  </div>
-</section>
-
-  </div>
-</section>
-
-  </div>
-</section>
-
-<section class="section">
-  <h3>Chuyên môn</h3>
-
-  <div class="services">
-
-    <div class="service">
-      <strong>Facebook Marketing</strong><br>
-      Xây dựng và phát triển hiện diện thương hiệu trên Facebook.
-    </div>
-
-    <div class="service">
-      <strong>Livestream Commerce</strong><br>
-      Tối ưu hoạt động bán hàng và tương tác thông qua livestream.
-    </div>
-
-    <div class="service">
-      <strong>Digital Branding</strong><br>
-      Phát triển hình ảnh cá nhân, doanh nghiệp và nhận diện thương hiệu trên nền tảng số.
-    </div>
-
-  </div>
-</section>
+          <div class="timeline-item">
+            <div class="year">Hiện tại</div>
+            <div class="timeline-content">
+              <h4>Founder ND Media Network</h4>
+              <p>Xây dựng hệ sinh thái truyền thông số và các giải pháp hỗ trợ doanh nghiệp phát triển thương hiệu trực tuyến.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section">
-        <h3>Lĩnh vực hoạt động</h3>
-
+        <h3>Chuyên môn</h3>
         <div class="services">
           <div class="service">
-            <strong>Facebook Growth</strong><br>
-            Phát triển hiện diện thương hiệu và tối ưu hoạt động trên nền tảng Facebook.
+            <strong>Facebook Marketing</strong><br>
+            Xây dựng và phát triển hiện diện thương hiệu trên Facebook.
           </div>
-
           <div class="service">
             <strong>Livestream Commerce</strong><br>
-            Hỗ trợ xây dựng hiệu quả bán hàng, tương tác và chuyển đổi qua livestream.
+            Tối ưu hoạt động bán hàng và tương tác thông qua livestream.
           </div>
-
           <div class="service">
             <strong>Digital Branding</strong><br>
-            Định hình hình ảnh cá nhân, doanh nghiệp và hệ thống truyền thông số.
+            Phát triển hình ảnh cá nhân, doanh nghiệp và nhận diện thương hiệu trên nền tảng số.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Dự án & Hệ sinh thái</h3>
+        <div class="ecosystem">
+          <div class="eco-item">
+            <h4>ND Media Network</h4>
+            <p>Hệ sinh thái truyền thông số tập trung vào Social Media Marketing và Facebook Growth.</p>
+          </div>
+          <div class="eco-item">
+            <h4>LeCongNhatDang.Shop</h4>
+            <p>Nền tảng cung cấp giải pháp tăng tương tác và hỗ trợ phát triển hiện diện trên mạng xã hội.</p>
+          </div>
+          <div class="eco-item">
+            <h4>Digital Ecosystem</h4>
+            <p>Xây dựng các giải pháp hỗ trợ cá nhân và doanh nghiệp phát triển thương hiệu trực tuyến.</p>
           </div>
         </div>
       </section>
