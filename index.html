@@ -224,32 +224,57 @@
       margin-top: 34px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      color: #fff;
-      background: #2563eb;
-      border: 1px solid #2563eb;
-      box-shadow: 0 14px 36px rgba(37,99,235,.35);
-      transition: .25s ease;
-    }
+    .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-    .btn.secondary {
-      background: rgba(255,255,255,.07);
-      border-color: rgba(255,255,255,.13);
-      box-shadow: none;
-    }
+    height:64px;
+    padding:0 34px;
+
+    border-radius:999px;
+
+    font-size:18px;
+    font-weight:600;
+
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+    .btn.secondary{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+}
+
+    .btn.service{
+    background:linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    color:#fff;
+    border:none;
+
+    box-shadow:
+        0 10px 30px rgba(124,58,237,.35);
+}
 
     .btn:hover {
       transform: translateY(-3px);
       opacity: .92;
     }
+
+    .actions{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.actions .btn{
+    min-width:190px;
+}
 
     .links {
       display: flex;
@@ -390,15 +415,15 @@
         Liên hệ hợp tác
     </a>
 
-    <a class="btn secondary"
-       href="#about">
-        Xem hồ sơ
-    </a>
-
-    <a class="btn service"
+      <a class="btn service"
        href="https://lecongnhatdang.shop"
        target="_blank">
         🚀 Tăng Tương Tác
+    </a>
+
+    <a class="btn secondary"
+       href="#about">
+        Xem hồ sơ
     </a>
 
 </div>
