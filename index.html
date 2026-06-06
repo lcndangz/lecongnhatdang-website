@@ -179,25 +179,46 @@
     }
 
     .box {
-      padding: 22px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(255,255,255,.11);
-    }
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.10);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-    .box span {
-      display: block;
-      color: #64748b;
-      font-size: 13px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: .8px;
-    }
+.box-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139,92,246,.12);
+  border: 1px solid rgba(139,92,246,.20);
+}
 
-    .box strong {
-      font-size: 20px;
-      color: #fff;
-    }
+.box-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.box span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.box strong {
+  font-size: 16px;
+  color: #fff;
+}
 
     .actions {
       display: flex;
@@ -387,22 +408,37 @@
         </div>
       </section>
 
-      <section class="stats">
-        <div class="box">
-          <span>Vai trò</span>
-          <strong>Founder</strong>
-        </div>
+     <section class="stats">
+  <div class="box">
+    <div class="box-icon">
+      <img src="https://cdn.simpleicons.org/person/8b5cf6" alt="">
+    </div>
+    <div>
+      <span>Tên</span>
+      <strong>Lê Công Nhật Đăng</strong>
+    </div>
+  </div>
 
-        <div class="box">
-          <span>Tổ chức</span>
-          <strong>ND Media Network</strong>
-        </div>
+  <div class="box">
+    <div class="box-icon">
+      <img src="https://cdn.simpleicons.org/briefcase/8b5cf6" alt="">
+    </div>
+    <div>
+      <span>Tổ chức</span>
+      <strong>ND Media Network</strong>
+    </div>
+  </div>
 
-        <div class="box">
-          <span>Lĩnh vực</span>
-          <strong>Social Media</strong>
-        </div>
-      </section>
+  <div class="box">
+    <div class="box-icon">
+      <img src="https://cdn.simpleicons.org/target/8b5cf6" alt="">
+    </div>
+    <div>
+      <span>Lĩnh vực</span>
+      <strong>Social Media</strong>
+    </div>
+  </div>
+</section>
 
       <div class="links">
         <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank" aria-label="Facebook">
