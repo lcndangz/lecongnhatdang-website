@@ -344,27 +344,127 @@
       font-size: 15px;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 22px;
+    .story-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 30px;
+      user-select: none;
     }
 
-    .service {
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid rgba(255,255,255,.1);
+    .story-container {
+      position: relative;
+      width: 340px;
+      height: 455px;
+      perspective: 1000px;
+    }
+
+    .story-card {
+      position: absolute;
+      inset: 0;
+      padding: 34px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(96,165,250,.24), transparent 35%),
+        linear-gradient(145deg, rgba(37,99,235,.18), rgba(124,58,237,.22));
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 0 28px 80px rgba(0,0,0,.32);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateX(0) scale(.82) rotateY(0deg);
+      transition: .45s ease;
+      pointer-events: none;
+    }
+
+    .story-card.active {
+      opacity: 1;
+      transform: translateX(0) scale(1) rotateY(0deg);
+      pointer-events: auto;
+      z-index: 3;
+    }
+
+    .story-card.prev {
+      opacity: .28;
+      transform: translateX(-92px) scale(.88) rotateY(10deg);
+      z-index: 1;
+    }
+
+    .story-card.next {
+      opacity: .28;
+      transform: translateX(92px) scale(.88) rotateY(-10deg);
+      z-index: 1;
+    }
+
+    .story-icon {
+      width: 118px;
+      height: 118px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      margin-bottom: 26px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 18px 45px rgba(37,99,235,.24);
+    }
+
+    .story-card h4 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .story-card p {
+      font-size: 16px;
+      line-height: 1.75;
       color: #cbd5e1;
-      line-height: 1.6;
-      transition: .25s ease;
+      margin: 0;
     }
 
-    .service:hover {
-      transform: translateY(-3px);
-      background: rgba(255,255,255,.065);
-      border-color: rgba(255,255,255,.18);
+    .story-btn {
+      width: 56px;
+      height: 56px;
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: white;
+      font-size: 24px;
+      transition: .25s ease;
+      z-index: 5;
+    }
+
+    .story-btn:hover {
+      background: #2563eb;
+      transform: scale(1.08);
+      box-shadow: 0 12px 34px rgba(37,99,235,.35);
+    }
+
+    .story-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .story-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.25);
+      transition: .25s;
+    }
+
+    .story-dot.active {
+      width: 24px;
+      background: #60a5fa;
     }
 
     .ecosystem {
@@ -391,23 +491,24 @@
     }
 
     footer {
-  text-align: center;
-  margin-top: 28px;
-  color: #64748b;
-  font-size: 14px;
-  padding: 20px;
-}
+      text-align: center;
+      margin-top: 28px;
+      color: #64748b;
+      font-size: 14px;
+      padding: 20px;
+    }
 
-footer a {
-  color: #60a5fa;
-  text-decoration: none;
-  transition: .25s;
-}
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+      transition: .25s;
+      font-weight: 600;
+    }
 
-footer a:hover {
-  color: #93c5fd;
-  text-shadow: 0 0 15px rgba(96,165,250,.6);
-}
+    footer a:hover {
+      color: #93c5fd;
+      text-shadow: 0 0 15px rgba(96,165,250,.6);
+    }
 
     .fade-up {
       opacity: 0;
@@ -431,10 +532,22 @@ footer a:hover {
       .hero { grid-template-columns: 1fr; }
       .hero-photo-wrap { justify-content: flex-start; }
       .hero-photo { width: 190px; height: 190px; }
-      .stats, .services { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; gap: 8px; }
       .year { padding-top: 0; }
       h1 { letter-spacing: -2px; }
+    }
+
+    @media (max-width: 620px) {
+      .story-wrapper { gap: 10px; }
+      .story-container { width: 270px; height: 400px; }
+      .story-card { padding: 26px; }
+      .story-card.prev { transform: translateX(-55px) scale(.84); }
+      .story-card.next { transform: translateX(55px) scale(.84); }
+      .story-icon { width: 92px; height: 92px; font-size: 38px; }
+      .story-card h4 { font-size: 23px; }
+      .story-card p { font-size: 14px; }
+      .story-btn { width: 46px; height: 46px; font-size: 20px; }
     }
 
     @media (max-width: 520px) {
@@ -595,20 +708,52 @@ footer a:hover {
 
       <section class="section fade-up fade-delay-3">
         <h3>Chuyên môn</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Facebook Marketing</strong><br>
-            Xây dựng và phát triển hiện diện thương hiệu trên Facebook.
+
+        <div class="story-wrapper">
+          <button class="story-btn" id="prevBtn" aria-label="Previous">❮</button>
+
+          <div class="story-container" id="storyContainer">
+            <div class="story-card active">
+              <div class="story-icon">✓</div>
+              <h4>Fanpage Verification</h4>
+              <p>Hỗ trợ xác minh và xây dựng độ tin cậy cho Fanpage, thương hiệu và doanh nghiệp trên Facebook.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">🔓</div>
+              <h4>Fanpage Recovery</h4>
+              <p>Hỗ trợ khôi phục và xử lý các vấn đề liên quan đến Fanpage và hệ thống Facebook.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">📈</div>
+              <h4>Facebook Growth</h4>
+              <p>Phát triển Fanpage, mở rộng độ phủ thương hiệu và tăng trưởng cộng đồng.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">🔴</div>
+              <h4>Livestream Marketing</h4>
+              <p>Tăng tương tác livestream, hỗ trợ bán hàng và tối ưu hiệu quả tiếp cận khách hàng.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">🌐</div>
+              <h4>Social Media Marketing</h4>
+              <p>Triển khai các giải pháp Marketing trên nền tảng mạng xã hội và truyền thông số.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">⚙️</div>
+              <h4>Automation Systems</h4>
+              <p>Xây dựng hệ thống tự động hóa và các giải pháp hỗ trợ vận hành Social Media.</p>
+            </div>
           </div>
-          <div class="service">
-            <strong>Livestream Commerce</strong><br>
-            Tối ưu hoạt động bán hàng và tương tác thông qua livestream.
-          </div>
-          <div class="service">
-            <strong>Digital Branding</strong><br>
-            Phát triển hình ảnh cá nhân, doanh nghiệp và nhận diện thương hiệu trên nền tảng số.
-          </div>
+
+          <button class="story-btn" id="nextBtn" aria-label="Next">❯</button>
         </div>
+
+        <div class="story-dots" id="storyDots"></div>
       </section>
 
       <section class="section fade-up fade-delay-3">
@@ -630,15 +775,86 @@ footer a:hover {
       </section>
     </main>
 
-   <footer>
-  © 2026
-  <a href="https://www.facebook.com/LeCongNhatDangvn.mmo"
-     target="_blank"
-     style="color:#60a5fa;text-decoration:none;font-weight:600;">
-     Lê Công Nhật Đăng
-  </a>.
-  All rights reserved.
-</footer>
+    <footer>
+      © 2026
+      <a href="https://www.facebook.com/LeCongNhatDangvn.mmo" target="_blank">
+        Lê Công Nhật Đăng
+      </a>.
+      All rights reserved.
+    </footer>
   </div>
+
+  <script>
+    const cards = document.querySelectorAll('.story-card');
+    const dotsContainer = document.getElementById('storyDots');
+    const storyContainer = document.getElementById('storyContainer');
+    let current = 0;
+    let startX = 0;
+
+    cards.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.className = 'story-dot';
+      dot.addEventListener('click', () => {
+        current = index;
+        updateCards();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.story-dot');
+
+    function updateCards() {
+      cards.forEach((card, index) => {
+        card.classList.remove('active', 'prev', 'next');
+
+        if (index === current) {
+          card.classList.add('active');
+        }
+
+        if (index === (current - 1 + cards.length) % cards.length) {
+          card.classList.add('prev');
+        }
+
+        if (index === (current + 1) % cards.length) {
+          card.classList.add('next');
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === current);
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      current = (current + 1) % cards.length;
+      updateCards();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      current = (current - 1 + cards.length) % cards.length;
+      updateCards();
+    });
+
+    storyContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    storyContainer.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 45) {
+        if (diff > 0) {
+          current = (current + 1) % cards.length;
+        } else {
+          current = (current - 1 + cards.length) % cards.length;
+        }
+
+        updateCards();
+      }
+    });
+
+    updateCards();
+  </script>
 </body>
 </html>
