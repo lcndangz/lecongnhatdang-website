@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lecongnhatdang.id.vn/sitemap.xml
